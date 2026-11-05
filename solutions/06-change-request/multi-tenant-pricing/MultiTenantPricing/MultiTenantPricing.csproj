@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- PricingEngine doesn't read its config store yet (that's the change request). Silence that warning. -->
+    <NoWarn>$(NoWarn);CS9113</NoWarn>
+  </PropertyGroup>
+
+</Project>

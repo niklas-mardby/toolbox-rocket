@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- The stubs don't use their parameters or events yet. Silence those warnings until you've built them. -->
+    <NoWarn>$(NoWarn);CS9113;CS0067</NoWarn>
+  </PropertyGroup>
+
+</Project>

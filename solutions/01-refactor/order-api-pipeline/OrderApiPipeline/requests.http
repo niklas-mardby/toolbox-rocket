@@ -1,0 +1,27 @@
+# Try the API from VS Code (REST Client) or Visual Studio / Rider.
+# Start the app first: dotnet run --project exercises/01-refactor/order-api-pipeline/OrderApiPipeline
+@host = http://localhost:5000
+
+### Place an order
+POST {{host}}/orders
+X-Customer-Id: anna
+Content-Type: application/json
+
+{ "lines": [ { "productId": "HAMMER", "quantity": 2 }, { "productId": "SAW", "quantity": 1 } ] }
+
+### List my orders
+GET {{host}}/orders
+X-Customer-Id: anna
+
+### Get one order
+GET {{host}}/orders/1
+X-Customer-Id: anna
+
+### Cancel it
+POST {{host}}/orders/1/cancel
+X-Customer-Id: anna
+
+### Ship it (staff only)
+POST {{host}}/orders/1/ship
+X-Customer-Id: lager-lisa
+X-Role: staff
